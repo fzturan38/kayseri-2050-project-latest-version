@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>İsrafla Mücadele - Bilgilendirme</title>
+  <style>
+    /* Genel */
+    :root{
+      --accent:#2c3e50;
+      --muted:#64748b;
+      --bg:#f8f8f8;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    main{max-width:1100px;margin:0 auto;}
+
+    /* Basit header */
+    header{
+      background:#ffcc00;
+      padding:18px 6%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    header h1{font-size:1.15rem;margin:0;color:#1f2937}
+    header nav a{margin-left:14px;color:#1f2937;text-decoration:none;font-weight:600}
+
+    /* Section ortak düzen */
+    .section{
+      padding:48px 6%;
+      display:flex;
+      gap:32px;
+      align-items:center;
+      justify-content:center;
+    }
+    .section:nth-child(even){background:#fff}
+    .section .image{flex:1;min-width:260px}
+    .section .image img{
+      width:100%;height:auto;border-radius:10px;display:block;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+    }
+    .section .content{flex:1;min-width:260px}
+    h2.section-title{font-size:1.6rem;color:var(--accent);margin:0 0 12px}
+    p{color:#334155;line-height:1.65;margin:0 0 8px}
+
+    /* Özellikler - 3 madde grid */
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;margin-top:18px;
+    }
+    .feature-card{
+      background:var(--card);padding:18px;border-radius:10px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.05);
+    }
+    .feature-card h4{margin:0 0 8px;color:var(--accent)}
+    .feature-card p{margin:0;color:var(--muted)}
+
+    /* Alternating content (already handled by .reverse class switching flex-direction) */
+    .content-section{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+    .reverse{flex-direction:row-reverse}
+
+    /* Ekip */
+    .team{
+      text-align:center;
+      padding:40px 6%;
+      background:#fff;
+    }
+    .team-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    .member{
+      width:160px;background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      display:flex;flex-direction:column;align-items:center;gap:8px;
+    }
+    .member img{width:92px;height:92px;border-radius:50%;object-fit:cover}
+    .member h4{font-size:0.95rem;margin:0;color:var(--accent)}
+    .member p{font-size:0.85rem;margin:0;color:var(--muted)}
+
+    /* Fiyatlandırma tablo */
+    .pricing{padding:40px 6%}
+    .pricing table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden}
+    .pricing th, .pricing td{padding:12px 14px;text-align:left;border-bottom:1px solid #eee}
+    .pricing thead th{background:#fffbeb;color:#7f5200;font-weight:700}
+    .pricing tbody tr:last-child td{border-bottom:0}
+
+    /* SSS */
+    .faq-section{padding:36px 6%;background:#fff}
+    .faq-item{margin-bottom:18px;padding-bottom:12px;border-bottom:1px dashed #e6eef6}
+    .faq-item h3{margin:0 0 8px;color:var(--accent);font-size:1.05rem}
+    .faq-item p{margin:0;color:#475569}
+
+    /* İletişim ve harita */
+    .contact{padding:40px 6%;text-align:center;background:#eef2f3}
+    .contact img{max-width:520px;width:100%;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.08);margin-top:12px}
+
+    /* Footer */
+    footer{background:var(--accent);color:#fff;padding:18px 6%;text-align:center;font-size:0.95rem}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .section, .pricing, .faq-section{padding:28px 6%}
+      .section{flex-direction:column}
+      .reverse{flex-direction:column}
+      header{padding:14px 6%}
+      .team-grid{gap:12px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>İsrafla Mücadele</h1>
+    <nav>
+      <a href="#about">Hakkımızda</a>
+      <a href="#features">Özellikler</a>
+      <a href="#content">Dönüşümlü İçerik</a>
+      <a href="#team">Ekip</a>
+      <a href="#pricing">Yardım Paketleri</a>
+      <a href="#faq">SSS</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hakkımızda -->
+    <section id="about" class="section">
+      <div class="image">
+        <img src="108a834a-523e-45c9-887c-275ce5605a13.png" alt="İsraf örneği">
+      </div>
+      <div class="content">
+        <h2 class="section-title">Hakkımızda</h2>
+        <p>Kayseri'de kurulmuş küçük bir işletmeyiz. Burada aile sıcaklığı var ve kalpleri ısıtan projeler üretiyoruz. İstersen sende bize katıl. Gerçek iyiliği hisset.</p>
+        <p><strong>İsraf nedir?</strong> İsraf, gereksiz yere harcama yapmak veya kaynakları bilinçsizce tüketmek anlamına gelir. Sadece para veya yiyecek değil; zaman, enerji ve yetenekler de israfa uğrayabilir.</p>
+      </div>
+    </section>
+
+    <!-- Özellikler -->
+    <section id="features" class="section" style="flex-direction:column;align-items:flex-start">
+      <div style="width:100%">
+        <h2 class="section-title">İsrafla Mücadele</h2>
+        <p style="color:var(--muted)">İsrafla mücadele, hem bireysel hem de toplumsal düzeyde kaynakların bilinçli ve verimli kullanılması için yürütülen önemli bir çabadır. Aşağıda temel noktalar özetlenmiştir.</p>
+
+        <div class="features-grid" style="margin-top:20px;">
+          <div class="feature-card">
+            <h4>Kaynakların gereksiz yere harcanmasıdır</h4>
+            <p>Gıda, su, enerji veya zaman gibi değerli kaynakların ihtiyaç fazlası tüketilmesi.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Ekonomik ve çevresel zarara yol açar</h4>
+            <p>İsraf hem maddi kayba hem de doğal kaynakların tükenmesine neden olur.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Din ve ahlak açısından hoş karşılanmaz</h4>
+            <p>Birçok kültürde ve dinde israf, olumsuz bir davranış olarak değerlendirilir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dönüşümlü içerik (1) -->
+    <section id="content" class="section content-section">
+      <div class="image">
+        <img src="4b7ac67c-9525-484c-a9fd-1772eeb005c2.png" alt="İsrafı önleme">
+      </div>
+      <div class="content">
+        <h2 class="section-title">İsrafı Önlemek İçin Neler Yapabiliriz?</h2>
+        <p>İsrafı önlemek için günlük yaşamda bilinçli ve planlı tüketim alışkanlıkları geliştirmek çok önemlidir. Alışverişe çıkmadan önce ihtiyaç listesi hazırlamak, son kullanma tarihlerini kontrol etmek ve artan yemekleri değerlendirmek gerekir.</p>
+        <p>Su tasarrufu için muslukları boşa akıtmamak, diş fırçalarken suyu kapatmak ve tasarruflu cihazlar kullanmak; enerji tasarrufu için kullanılmayan cihazları kapatmak ve tasarruflu ampuller tercih etmek etkilidir.</p>
+      </div>
+    </section>
+
+    <!-- Dönüşümlü içerik (2) (ters) -->
+    <section class="section content-section reverse">
+      <div class="image">
+        <img src="a8ec6bba-eb74-4535-adcb-1270316108f7.png" alt="Gıda artıkları">
+      </div>
+      <div class="content">
+        <h2 class="section-title">Artan Yemekleri Değerlendirin</h2>
+        <p>Artan yemekleri saklama ve yeniden değerlendirme kültürünü benimseyin. Kompost yapmak, artıkları doğru şekilde depolamak ya da paylaşmak israfı azaltır.</p>
+        <p>Planlı yemek hazırlama, uygun saklama koşulları ve porsiyon kontrolü gıda israfını azaltmanın temel yollarındandır.</p>
+      </div>
+    </section>
+
+    <!-- Ekip -->
+    <section id="team" class="team">
+      <h2 class="section-title" style="margin-bottom:6px">Ekip</h2>
+      <p style="color:var(--muted);margin-top:0">Sıcak bir ekip ile projelerimizi yürütüyoruz.</p>
+      <div class="team-grid">
+        <div class="member">
+          <img src="39b1b607-379c-4c0e-a99f-ed51e805476e.png" alt="Kurucumuz">
+          <h4>Kurucumuz Fatma Zeynep Turan</h4>
+          <p style="font-size:0.85rem;color:var(--muted)">Kurucu — Toplumsal projeler & organizasyon</p>
+        </div>
+        <div class="member">
+          <img src="0ad16cef-dba1-4682-a417-67b3f4ac636a.png" alt="AI Ailesi">
+          <h4>Çalışma Ekibimiz — AI ailesi</h4>
+          <p style="font-size:0.85rem;color:var(--muted)">Veri ve lojistik desteği ile yardımların ulaştırılmasını sağlar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fiyatlandırma / Yardım Paketleri -->
+    <section id="pricing" class="pricing">
+      <h2 class="section-title">Yardım Fiyat Kataloğu</h2>
+      <p style="color:var(--muted)">Aşağıda örnek yardım paketleri ve tutarları yer almaktadır.</p>
+
+      <table aria-label="Yardım paketleri">
+        <thead>
+          <tr>
+            <th>Kod</th>
+            <th>Açıklama</th>
+            <th>Tutar (₺)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>YP-01</td><td>1 Kişilik Gıda ve Temel İhtiyaç – 1 ay</td><td>1.000</td></tr>
+          <tr><td>YP-02</td><td>2 Kişilik Gıda ve Temel İhtiyaç – 1 ay</td><td>2.000</td></tr>
+          <tr><td>YP-03</td><td>4 Kişilik Aile Paketi – 1 ay</td><td>4.000</td></tr>
+          <tr><td>YP-04</td><td>Eğitim Destek Paketi – 1 öğrenci (materyal + burs)</td><td>1.000</td></tr>
+          <tr><td>YP-05</td><td>Sağlık Destek Paketi – Temel sağlık giderleri</td><td>1.000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SSS -->
+    <section id="faq" class="faq-section">
+      <h2>Sıkça Sorulan Sorular</h2>
+
+      <div class="faq-item">
+        <h3>Yardımlar kaç gün sonra ulaşıyor?</h3>
+        <p>Sorunuz için teşekkürler efendim. Yardımı ulaştırma süremiz ortalama 1 hafta sürüyor.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>İsrafı en çok hangi alanlarda azaltabiliriz?</h3>
+        <p>Gıda, su ve enerji kullanımlarında küçük alışkanlık değişiklikleri büyük fark yaratır: planlı alışveriş, doğru saklama, su ve enerji tasarrufu.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Evde gıda israfını nasıl azaltabilirim?</h3>
+        <p>Alışveriş öncesi liste yap, porsiyonları kontrol et, artan yemekleri sakla veya paylaş.</p>
+      </div>
+
+    </section>
+
+    <!-- Bizimle İletişime Geçin (harita) -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Bizimle İletişime Geçin</h2>
+      <p style="margin:6px 0 0">Adres: Kayseri, Türkiye</p>
+      <img src="kayseri-harita.png" alt="Kayseri işaretli Türkiye haritası">
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Tel.: 0352 875 91 53 &nbsp; | &nbsp; Faks: 0215 514 85 258
+  </footer>
+
+</body>
+</html>
